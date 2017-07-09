@@ -3,7 +3,7 @@ this is my code
  
 int main()
 {
-   int a, b, c;
+   int a, b, c,f,h;
  
    printf("Enter two numbers to add\n");
    scanf("%d%d",&a,&b);
