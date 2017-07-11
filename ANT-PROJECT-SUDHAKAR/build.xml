@@ -1,0 +1,42 @@
+
+
+<project name ="2nd project" default ="clean">
+
+<target name = "clean" depends >
+<mkdir dir = "build"/>
+<mkdir dir = "web"/>
+</target>
+
+<target name = "init" depends >
+<mkdir dir = "build"/>
+<mkdir dir = "build/classes"/>
+<mkdir dir = "build/output"/>
+<mkdir dir = "web"/>
+</target>
+
+<target name = "compile" depends >
+<javac srcdir = "src/java"/>
+<javac destdir = "build/classes"/>
+<classpath = "lib/junit.java"/>
+</target>
+
+<target name = "jar" depends >
+<jar destfile= "build/output/redbus.jar" basedir = "build/classes"/>
+</target>
+
+<target name = "copy" depends >
+<copy todir = "build/web"/>
+<fileset dir = "src/web"/>
+</target>
+
+<target name = "zip" depends >
+<zip destfile = "dest/redbus.zip"/>
+<fileset dir = "build/output"/>
+<fileset dir = "build/web"/>
+</target>
+
+
+
+
+</project>
+
